@@ -35,9 +35,9 @@ Just do the work seamlessly.
 ### When the Request Is Clear
 
 Direct mapping — no hesitation:
-- "Bir sunum hazırla" → read `pptx` SKILL.md → start making the presentation
-- "Bu PDF'i birleştir" → read `pdf` SKILL.md → start merging
-- "Excel'de bir tablo yap" → read `xlsx` SKILL.md → start building
+- "Create a presentation" → read `pptx` SKILL.md → start making the presentation
+- "Merge these PDFs" → read `pdf` SKILL.md → start merging
+- "Make a table in Excel" → read `xlsx` SKILL.md → start building
 - "Build me a landing page" → read `frontend-design` SKILL.md → start coding
 - "Write a Word report" → read `docx` SKILL.md → start writing
 
@@ -45,7 +45,7 @@ Direct mapping — no hesitation:
 
 Even then, **don't stop and ask.** Make your best judgment based on context and start working.
 Only ask ONE short clarifying question if the ambiguity would lead to completely wrong output
-(e.g., "tasarım" could be a poster OR a website — these are fundamentally different deliverables).
+(e.g., "design" could be a poster OR a website — these are fundamentally different deliverables).
 
 If you must ask, ask and route in the same message. Never just ask and wait.
 
@@ -54,7 +54,7 @@ If you must ask, ask and route in the same message. Never just ask and wait.
 ```
 User request arrives
   │
-  ├─ Clear deliverable? (PDF, sunum, website, bug fix...)
+  ├─ Clear deliverable? (PDF, presentation, website, bug fix...)
   │   └─ Read that skill's SKILL.md → do the work immediately
   │
   ├─ Ambiguous but best guess is strong?
